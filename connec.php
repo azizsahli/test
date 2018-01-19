@@ -1,4 +1,5 @@
  <?php
+$_POST["id"]
 $servername = " phpMyAdmin demo";
 $username = "root";
 $password = "";
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO accounts (id, pass,)
-VALUES ('John', 'Doe')";
+VALUES ('$_POST["id"]', '$_POST["pass"]')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
